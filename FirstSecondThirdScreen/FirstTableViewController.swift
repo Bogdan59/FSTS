@@ -14,16 +14,30 @@ class FirstTableViewController: UITableViewController {
     var SecondArray = [SecondTable]()
     var ThirdArray = [ThirdTable]()
     
+//    var  FirstTableArray = [
+//        Person(
+//            id: 1,
+//            picture: "picture1.png",
+//            firstName: "John",
+//            lastName: "Smith"
+//        ),
+//        Person(
+//            id: 2,
+//            picture: "picture2.png",
+//            firstName: "Mike",
+//            lastName: "Rutherford"
+//        ),
+//        ]
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        FirstTableArray = ["Из книг", "Из сериало", "Из песен", "Из мультфильмов"]
+        FirstTableArray = ["Из книг", "Из песен", "Из мультфильмов"]
         
         SecondArray = [SecondTable(SecondTitle: ["I Eat Tomatoes. Дорогой звёзд", "Ilze Falb. Издевательство над Эвтерпой", "Nekolife. Песнь о мечте"], Pic: ""),
-                       SecondTable(SecondTitle: ["""
-                        10 причин моей ненависти (10 Things I Hate About You
-""", "11.22.63", "12 обезьян (12 Monkeys)"], Pic: ""),
+                       SecondTable(SecondTitle: ["10 причин моей ненависти (10 Things I Hate About You", "11.22.63", "12 обезьян (12 Monkeys)"], Pic: ""),
                        SecondTable(SecondTitle: ["FirstThird", "SecondThird", "Thirdthird"], Pic: ""),
                         SecondTable(SecondTitle: ["First4"], Pic: "")]
         

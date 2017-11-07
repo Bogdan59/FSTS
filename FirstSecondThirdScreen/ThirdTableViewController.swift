@@ -13,13 +13,9 @@ class ThirdTableViewController: UITableViewController {
     
     var ThirdArray = [String]()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        
-    }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print(ThirdArray.count)
         return ThirdArray.count
     }
     
