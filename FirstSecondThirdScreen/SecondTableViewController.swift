@@ -45,7 +45,7 @@ class SecondTableViewController: UITableViewController {
         var indexPath: NSIndexPath = self.tableView.indexPathForSelectedRow! as NSIndexPath
         var ThirdTableArray: ThirdTable
         ThirdTableArray = ThirdArray[indexPath.row]
-        DestViewControllerThird.ThirdArray = ThirdTableArray.ThirdTitle
+//        DestViewControllerThird.ThirdArray = ThirdTableArray.ThirdTitle
     }
     
 }

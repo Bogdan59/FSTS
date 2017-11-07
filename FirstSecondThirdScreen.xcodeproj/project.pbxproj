@@ -62,13 +62,13 @@
 		3A6DA8351FAFB4EC00F0AA8B /* FirstSecondThirdScreen */ = {
 			isa = PBXGroup;
 			children = (
+				3A6DA83A1FAFB4EC00F0AA8B /* Main.storyboard */,
 				3A6DA8361FAFB4EC00F0AA8B /* AppDelegate.swift */,
 				3A6DA8381FAFB4EC00F0AA8B /* FirstTableViewController.swift */,
 				3A6DA84A1FAFBC0F00F0AA8B /* SecondTable.swift */,
 				3A6DA84E1FAFC07E00F0AA8B /* ThirdTable.swift */,
 				3A6DA8481FAFB9A100F0AA8B /* SecondTableViewController.swift */,
 				3A6DA84C1FAFC00C00F0AA8B /* ThirdTableViewController.swift */,
-				3A6DA83A1FAFB4EC00F0AA8B /* Main.storyboard */,
 				3A6DA83D1FAFB4EC00F0AA8B /* Assets.xcassets */,
 				3A6DA83F1FAFB4EC00F0AA8B /* LaunchScreen.storyboard */,
 				3A6DA8421FAFB4EC00F0AA8B /* Info.plist */,
