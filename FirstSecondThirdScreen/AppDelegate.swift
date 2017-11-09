@@ -7,15 +7,25 @@
 //
 
 import UIKit
+import Parse
+
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDelegate {
 
     var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+    
+            // Initialize Parse.
+        let configuration = ParseClientConfiguration {
+            $0.applicationId = "UwbCI9p6svmuWdBUHgSloG0XIF7e0arFwxtt1I6N"
+            $0.clientKey = "rnxN0uK9unLY1BBx1xiPwuxVJ7voMyMovXVHroWa"
+            $0.server = "https://parseapi.back4app.com"
+        }
+        Parse.initialize(with: configuration)
+        
         return true
     }
 
