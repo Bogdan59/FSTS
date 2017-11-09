@@ -23,20 +23,20 @@ class ServerWriteViewController : UIViewController {
                 self.textField.text = nil
                 self.usernameField.text = nil
             }
-        
+            
         }
+        
+    }
     
-}
     
-    
-//    let object = PFObject(className: "Quote")
-//    object["text"] = textField.text!
-//    object["authorName"] = "Dima"
-//    object.saveEventually { (success, error) in
-//    if success {
-//    self.textField.text = nil
-//    }
-//    }
+    //    let object = PFObject(className: "Quote")
+    //    object["text"] = textField.text!
+    //    object["authorName"] = "Dima"
+    //    object.saveEventually { (success, error) in
+    //    if success {
+    //    self.textField.text = nil
+    //    }
+    //    }
     
     
 }

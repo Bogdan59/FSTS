@@ -10,8 +10,8 @@ import Foundation
 import Parse
 
 class SecondTableViewController: UITableViewController {
-
-
+    
+    
     @IBOutlet var categoryTable: UITableView!
     var selected12Category: PFObject?
     var category12Items = [PFObject]()
@@ -85,7 +85,7 @@ class SecondTableViewController: UITableViewController {
         //
         
         
-}
+    }
 }
 
 

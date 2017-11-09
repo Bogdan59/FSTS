@@ -82,7 +82,7 @@ class ReadServerTableViewController : UITableViewController { //, UITableViewDat
     
     var userQuote = [PFUser]()
     
-
+    
     
     
     override func viewDidLoad() {

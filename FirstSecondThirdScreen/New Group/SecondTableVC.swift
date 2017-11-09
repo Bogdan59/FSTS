@@ -10,7 +10,7 @@ import UIKit
 import Parse
 
 class SecondTableVC: UITableViewController {
-
+    
     @IBOutlet weak var refresherCategory: UIRefreshControl!
     @IBOutlet var categoryTable: UITableView!
     
@@ -50,7 +50,7 @@ class SecondTableVC: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return categoryItems.count
-
+        
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -64,10 +64,10 @@ class SecondTableVC: UITableViewController {
         
         bookCell.textLabel?.text = categoryUserTitle
         
-//        let categoryCell = tableView.dequeueReusableCell(withIdentifier: "bookCell", for: indexPath)
+        //        let categoryCell = tableView.dequeueReusableCell(withIdentifier: "bookCell", for: indexPath)
         
-//        let object = category[indexPath.row]
-//        categoryTable.textLabel!.text = bookItem["Text"] as? String
+        //        let object = category[indexPath.row]
+        //        categoryTable.textLabel!.text = bookItem["Text"] as? String
         
         return bookCell
     }
@@ -93,11 +93,11 @@ class SecondTableVC: UITableViewController {
         //
         
         
-}
+    }
     
     func fetchCategoryData() {
         let categoriesQuery = PFQuery(className: "TotalTest")
-//        categoriesQuery.whereKeyExists("Subcategory")
+        //        categoriesQuery.whereKeyExists("Subcategory")
         categoriesQuery.whereKey("Subcategory", equalTo: selectedCategory ?? nil)
         categoriesQuery.findObjectsInBackground { (objects, error) in
             if let realCategoryObjects = objects {
@@ -112,26 +112,26 @@ class SecondTableVC: UITableViewController {
     
     // MARK: - Segues
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "showCategoryDetail" {
-//            if let indexPath = tableView.indexPathForSelectedRow {
-//                let Categoryobject = categoryItems[indexPath.row] as? NSDate
-//                let categoryController = (segue.destination as! UINavigationController).topViewController as! DetailViewController
-//                categoryController.detailItem = Categoryobject
-//                categoryController.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
-//                categoryController.navigationItem.leftItemsSupplementBackButton = true
-//            }
-//        }
-//    }
+    //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    //        if segue.identifier == "showCategoryDetail" {
+    //            if let indexPath = tableView.indexPathForSelectedRow {
+    //                let Categoryobject = categoryItems[indexPath.row] as? NSDate
+    //                let categoryController = (segue.destination as! UINavigationController).topViewController as! DetailViewController
+    //                categoryController.detailItem = Categoryobject
+    //                categoryController.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
+    //                categoryController.navigationItem.leftItemsSupplementBackButton = true
+    //            }
+    //        }
+    //    }
     
-
-//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-//
-//        let object = category[indexPath.row]
-//        cell.textLabel!.text = object["Class"] as? String
-//        return cell
-//    }
+    
+    //    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    //        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+    //
+    //        let object = category[indexPath.row]
+    //        cell.textLabel!.text = object["Class"] as? String
+    //        return cell
+    //    }
     //
     
     
