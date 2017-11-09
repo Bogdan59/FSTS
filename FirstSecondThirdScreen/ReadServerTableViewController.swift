@@ -78,9 +78,9 @@ import Parse
 
 class ReadServerTableViewController : UITableViewController { //, UITableViewDataSource, UITableViewDelegate
     
-    @IBOutlet var categoryTable: UITableView!
+    @IBOutlet var userQuoteTable: UITableView!
     
-    var categories = [PFUser]()
+    var userQuote = [PFUser]()
     
 
     
@@ -88,7 +88,7 @@ class ReadServerTableViewController : UITableViewController { //, UITableViewDat
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        loadCategory()
+        loadUserQuote()
         
     }
     
@@ -100,14 +100,15 @@ class ReadServerTableViewController : UITableViewController { //, UITableViewDat
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return categories.count
+        return userQuote.count
         
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let  cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        let categoryObject: PFUser = categories[indexPath.row]
-        cell.textLabel!.text = categoryObject.object(forKey: "Class") as? String
+        let  cell = tableView.dequeueReusableCell(withIdentifier: "ReadCell", for: indexPath)
+        let categoryObject: PFUser = userQuote[indexPath.row]
+        cell.textLabel!.text = categoryObject.object(forKey: "textQuote") as? String
+        cell.textLabel!.text = categoryObject.object(forKey: "username") as? String
         
         return cell
     }
@@ -117,12 +118,12 @@ class ReadServerTableViewController : UITableViewController { //, UITableViewDat
         
     }
     
-    func loadCategory() {
-        let categoryQuery = PFQuery(className: "Categories")
+    func loadUserQuote() {
+        let categoryQuery = PFQuery(className: "UsersQuotes")
         categoryQuery.findObjectsInBackground { (result: [PFObject]?, error) in
             if let foundCategory = result as? [PFUser] {
-                self.categories = foundCategory
-                self.categoryTable.reloadData()
+                self.userQuote = foundCategory
+                self.userQuoteTable.reloadData()
             }
             
         }

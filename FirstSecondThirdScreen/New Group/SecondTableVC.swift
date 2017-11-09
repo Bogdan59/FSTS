@@ -112,17 +112,17 @@ class SecondTableVC: UITableViewController {
     
     // MARK: - Segues
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showCategoryDetail" {
-            if let indexPath = tableView.indexPathForSelectedRow {
-                let Categoryobject = categoryItems[indexPath.row] as? NSDate
-                let categoryController = (segue.destination as! UINavigationController).topViewController as! DetailViewController
-                categoryController.detailItem = Categoryobject
-                categoryController.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
-                categoryController.navigationItem.leftItemsSupplementBackButton = true
-            }
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "showCategoryDetail" {
+//            if let indexPath = tableView.indexPathForSelectedRow {
+//                let Categoryobject = categoryItems[indexPath.row] as? NSDate
+//                let categoryController = (segue.destination as! UINavigationController).topViewController as! DetailViewController
+//                categoryController.detailItem = Categoryobject
+//                categoryController.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
+//                categoryController.navigationItem.leftItemsSupplementBackButton = true
+//            }
+//        }
+//    }
     
 
 //    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

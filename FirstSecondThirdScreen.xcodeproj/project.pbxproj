@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		254AFD0DEE166F12439655FD /* Pods_FirstSecondThirdScreen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B94D930F606CCFB77FF482FE /* Pods_FirstSecondThirdScreen.framework */; };
+		3A6A1BB41FB2761300AF1E3D /* ReadServerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A1BB31FB2761300AF1E3D /* ReadServerTableViewController.swift */; };
+		3A6A1BB61FB2783000AF1E3D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A1BB51FB2783000AF1E3D /* DetailViewController.swift */; };
+		3A6A1BBB1FB3C4F200AF1E3D /* FirstTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A1BBA1FB3C4F200AF1E3D /* FirstTableVC.swift */; };
+		3A6A1BBE1FB3C54400AF1E3D /* SecondTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A1BBD1FB3C54400AF1E3D /* SecondTableVC.swift */; };
+		3A6A1BC01FB4852000AF1E3D /* ThirdTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A1BBF1FB4852000AF1E3D /* ThirdTableVC.swift */; };
 		3A6DA8371FAFB4EC00F0AA8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6DA8361FAFB4EC00F0AA8B /* AppDelegate.swift */; };
 		3A6DA8391FAFB4EC00F0AA8B /* FirstTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6DA8381FAFB4EC00F0AA8B /* FirstTableViewController.swift */; };
 		3A6DA83C1FAFB4EC00F0AA8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A6DA83A1FAFB4EC00F0AA8B /* Main.storyboard */; };
@@ -16,9 +22,17 @@
 		3A6DA84B1FAFBC0F00F0AA8B /* SecondTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6DA84A1FAFBC0F00F0AA8B /* SecondTable.swift */; };
 		3A6DA84D1FAFC00C00F0AA8B /* ThirdTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6DA84C1FAFC00C00F0AA8B /* ThirdTableViewController.swift */; };
 		3A6DA84F1FAFC07E00F0AA8B /* ThirdTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6DA84E1FAFC07E00F0AA8B /* ThirdTable.swift */; };
+		3AD261551FB26F7000FF1826 /* ServerWriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD261541FB26F7000FF1826 /* ServerWriteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C8C691A81D54396A5852EAA /* Pods-FirstSecondThirdScreen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstSecondThirdScreen.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirstSecondThirdScreen/Pods-FirstSecondThirdScreen.debug.xcconfig"; sourceTree = "<group>"; };
+		135861A6F2C232D3EE1BD3BA /* Pods-FirstSecondThirdScreen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstSecondThirdScreen.release.xcconfig"; path = "Pods/Target Support Files/Pods-FirstSecondThirdScreen/Pods-FirstSecondThirdScreen.release.xcconfig"; sourceTree = "<group>"; };
+		3A6A1BB31FB2761300AF1E3D /* ReadServerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadServerTableViewController.swift; sourceTree = "<group>"; };
+		3A6A1BB51FB2783000AF1E3D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		3A6A1BBA1FB3C4F200AF1E3D /* FirstTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTableVC.swift; sourceTree = "<group>"; };
+		3A6A1BBD1FB3C54400AF1E3D /* SecondTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTableVC.swift; sourceTree = "<group>"; };
+		3A6A1BBF1FB4852000AF1E3D /* ThirdTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdTableVC.swift; sourceTree = "<group>"; };
 		3A6DA8331FAFB4EC00F0AA8B /* FirstSecondThirdScreen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstSecondThirdScreen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A6DA8361FAFB4EC00F0AA8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A6DA8381FAFB4EC00F0AA8B /* FirstTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTableViewController.swift; sourceTree = "<group>"; };
@@ -30,6 +44,8 @@
 		3A6DA84A1FAFBC0F00F0AA8B /* SecondTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTable.swift; sourceTree = "<group>"; };
 		3A6DA84C1FAFC00C00F0AA8B /* ThirdTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdTableViewController.swift; sourceTree = "<group>"; };
 		3A6DA84E1FAFC07E00F0AA8B /* ThirdTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdTable.swift; sourceTree = "<group>"; };
+		3AD261541FB26F7000FF1826 /* ServerWriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerWriteViewController.swift; sourceTree = "<group>"; };
+		B94D930F606CCFB77FF482FE /* Pods_FirstSecondThirdScreen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirstSecondThirdScreen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +53,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				254AFD0DEE166F12439655FD /* Pods_FirstSecondThirdScreen.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A6A1BB91FB3C4D000AF1E3D /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				3A6A1BBA1FB3C4F200AF1E3D /* FirstTableVC.swift */,
+				3A6A1BBD1FB3C54400AF1E3D /* SecondTableVC.swift */,
+				3A6A1BBF1FB4852000AF1E3D /* ThirdTableVC.swift */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		3A6DA82A1FAFB4EC00F0AA8B = {
 			isa = PBXGroup;
 			children = (
 				3A6DA8351FAFB4EC00F0AA8B /* FirstSecondThirdScreen */,
 				3A6DA8341FAFB4EC00F0AA8B /* Products */,
+				B2AC5ABD31907776A8F047BC /* Pods */,
+				B2D9363D64B321AD0290061A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,18 +91,39 @@
 		3A6DA8351FAFB4EC00F0AA8B /* FirstSecondThirdScreen */ = {
 			isa = PBXGroup;
 			children = (
+				3A6DA83A1FAFB4EC00F0AA8B /* Main.storyboard */,
 				3A6DA8361FAFB4EC00F0AA8B /* AppDelegate.swift */,
+				3A6A1BB91FB3C4D000AF1E3D /* New Group */,
+				3AD261541FB26F7000FF1826 /* ServerWriteViewController.swift */,
+				3A6A1BB51FB2783000AF1E3D /* DetailViewController.swift */,
+				3A6A1BB31FB2761300AF1E3D /* ReadServerTableViewController.swift */,
 				3A6DA8381FAFB4EC00F0AA8B /* FirstTableViewController.swift */,
 				3A6DA84A1FAFBC0F00F0AA8B /* SecondTable.swift */,
 				3A6DA84E1FAFC07E00F0AA8B /* ThirdTable.swift */,
 				3A6DA8481FAFB9A100F0AA8B /* SecondTableViewController.swift */,
 				3A6DA84C1FAFC00C00F0AA8B /* ThirdTableViewController.swift */,
-				3A6DA83A1FAFB4EC00F0AA8B /* Main.storyboard */,
 				3A6DA83D1FAFB4EC00F0AA8B /* Assets.xcassets */,
 				3A6DA83F1FAFB4EC00F0AA8B /* LaunchScreen.storyboard */,
 				3A6DA8421FAFB4EC00F0AA8B /* Info.plist */,
 			);
 			path = FirstSecondThirdScreen;
+			sourceTree = "<group>";
+		};
+		B2AC5ABD31907776A8F047BC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0C8C691A81D54396A5852EAA /* Pods-FirstSecondThirdScreen.debug.xcconfig */,
+				135861A6F2C232D3EE1BD3BA /* Pods-FirstSecondThirdScreen.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B2D9363D64B321AD0290061A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B94D930F606CCFB77FF482FE /* Pods_FirstSecondThirdScreen.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,9 +133,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3A6DA8451FAFB4EC00F0AA8B /* Build configuration list for PBXNativeTarget "FirstSecondThirdScreen" */;
 			buildPhases = (
+				3B533A9B533127F69CB73A11 /* [CP] Check Pods Manifest.lock */,
 				3A6DA82F1FAFB4EC00F0AA8B /* Sources */,
 				3A6DA8301FAFB4EC00F0AA8B /* Frameworks */,
 				3A6DA8311FAFB4EC00F0AA8B /* Resources */,
+				A9E566CEB335A0BC4001A77E /* [CP] Embed Pods Frameworks */,
+				E0296BB891B9D800ABD24C31 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -143,17 +196,79 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3B533A9B533127F69CB73A11 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FirstSecondThirdScreen-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A9E566CEB335A0BC4001A77E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FirstSecondThirdScreen/Pods-FirstSecondThirdScreen-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/Parse/Parse.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parse.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FirstSecondThirdScreen/Pods-FirstSecondThirdScreen-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E0296BB891B9D800ABD24C31 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FirstSecondThirdScreen/Pods-FirstSecondThirdScreen-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3A6DA82F1FAFB4EC00F0AA8B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A6A1BB61FB2783000AF1E3D /* DetailViewController.swift in Sources */,
+				3A6A1BB41FB2761300AF1E3D /* ReadServerTableViewController.swift in Sources */,
 				3A6DA84F1FAFC07E00F0AA8B /* ThirdTable.swift in Sources */,
 				3A6DA84B1FAFBC0F00F0AA8B /* SecondTable.swift in Sources */,
+				3AD261551FB26F7000FF1826 /* ServerWriteViewController.swift in Sources */,
+				3A6A1BBE1FB3C54400AF1E3D /* SecondTableVC.swift in Sources */,
 				3A6DA8491FAFB9A100F0AA8B /* SecondTableViewController.swift in Sources */,
 				3A6DA8391FAFB4EC00F0AA8B /* FirstTableViewController.swift in Sources */,
 				3A6DA8371FAFB4EC00F0AA8B /* AppDelegate.swift in Sources */,
+				3A6A1BBB1FB3C4F200AF1E3D /* FirstTableVC.swift in Sources */,
 				3A6DA84D1FAFC00C00F0AA8B /* ThirdTableViewController.swift in Sources */,
+				3A6A1BC01FB4852000AF1E3D /* ThirdTableVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +403,7 @@
 		};
 		3A6DA8461FAFB4EC00F0AA8B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C8C691A81D54396A5852EAA /* Pods-FirstSecondThirdScreen.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -302,6 +418,7 @@
 		};
 		3A6DA8471FAFB4EC00F0AA8B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 135861A6F2C232D3EE1BD3BA /* Pods-FirstSecondThirdScreen.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

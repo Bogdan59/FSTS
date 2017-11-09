@@ -27,4 +27,18 @@ class ServerWriteViewController : UIViewController {
         }
     
 }
+    
+    
+//    let object = PFObject(className: "Quote")
+//    object["text"] = textField.text!
+//    object["authorName"] = "Dima"
+//    object.saveEventually { (success, error) in
+//    if success {
+//    self.textField.text = nil
+//    }
+//    }
+    
+    
 }
+
+

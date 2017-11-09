@@ -77,7 +77,7 @@ class FirstTableVC: UITableViewController {
         let selectedCategory: PFObject = category[indexPath.row]
         let SecondTableVC = self.storyboard?.instantiateViewController(withIdentifier: "SecondTableVCC") as! SecondTableVC
         SecondTableVC.selectedCategory = selectedCategory
-        
+
         self.navigationController?.pushViewController(SecondTableVC, animated: true)
         
         

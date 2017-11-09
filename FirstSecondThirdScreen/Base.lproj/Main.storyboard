@@ -36,9 +36,6 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="Esh-3G-fJk" kind="show" id="bYw-l8-eVT"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -88,9 +85,6 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="dd0-yw-oke" kind="show" id="4go-qA-fJo"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -156,7 +150,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zMA-zu-UkP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-6398" y="3658"/>
+            <point key="canvasLocation" x="-6398" y="3654"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="3JP-9F-aDM">
@@ -228,7 +222,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="SEc-e9-epf">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReadCell" id="SEc-e9-epf">
                                 <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SEc-e9-epf" id="IA0-bJ-mTW">
@@ -244,7 +238,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="Gxt-LG-pJn"/>
                     <connections>
-                        <outlet property="categoryTable" destination="tIn-FI-jbf" id="9ZM-qD-PRt"/>
+                        <outlet property="userQuoteTable" destination="tIn-FI-jbf" id="YxG-m6-ojL"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xzF-vM-Bri" userLabel="First Responder" sceneMemberID="firstResponder"/>

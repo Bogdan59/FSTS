@@ -1,0 +1,6 @@
+framework module Pods_FirstSecondThirdScreen {
+  umbrella header "Pods-FirstSecondThirdScreen-umbrella.h"
+
+  export *
+  module * { export * }
+}
