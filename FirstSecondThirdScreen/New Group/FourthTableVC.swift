@@ -1,21 +1,20 @@
 //
-//  SecondTableVC.swift
+//  FourthTableVC.swift
 //  FirstSecondThirdScreen
 //
-//  Created by Bogdan Dubiahin on 09.11.2017.
+//  Created by Bogdan Dubiahin on 12.11.2017.
 //  Copyright © 2017 Bogdan Dubiahin. All rights reserved.
 //
-
 import UIKit
 import Parse
 
-class SecondTableVC: UITableViewController {
+class FourthTableVC: UITableViewController {
+
+    @IBOutlet weak var refresherQuotes: UIRefreshControl!
+//    @IBOutlet var categoryTable: UITableView!
     
-    @IBOutlet weak var refresherCategory: UIRefreshControl!
-    @IBOutlet var categoryTable: UITableView!
-    
-    var selectedCategory: PFObject?
-    var categoryItems = [PFObject]()
+    var selectedQuotes: PFObject?
+    var quotesItems = [PFObject]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +28,7 @@ class SecondTableVC: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        loadCategorySub(selectedCategory: selectedCategory)
+        loadQuotesCategorySub(selectedCategory: selectedQuotes)
         //        loadCategorySongs(selectedCategory: selectedCategory)
     }
     
@@ -49,44 +48,44 @@ class SecondTableVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return categoryItems.count
+        return quotesItems.count
         
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let bookCell = tableView.dequeueReusableCell(withIdentifier: "bookCell", for: indexPath)
+        let quotesCell = tableView.dequeueReusableCell(withIdentifier: "quoteDetailCell", for: indexPath)
         
-        let bookItem = categoryItems[indexPath.row]
+        let bookItem = quotesItems[indexPath.row]
         let categoryUserTitle = bookItem.object(forKey: "Text") as? String
         //
         //        let songItem = categoryItems[indexPath.row]
         //        _ = songItem.object(forKey: "SongsText") as? String
         
-        bookCell.textLabel?.text = categoryUserTitle
+        quotesCell.textLabel?.text = categoryUserTitle
         
         //        let categoryCell = tableView.dequeueReusableCell(withIdentifier: "bookCell", for: indexPath)
         
         //        let object = category[indexPath.row]
         //        categoryTable.textLabel!.text = bookItem["Text"] as? String
         
-        return bookCell
+        return quotesCell
     }
     
     
     
     
-    func loadCategorySub(selectedCategory: PFObject!) {
+    func loadQuotesCategorySub(selectedCategory: PFObject!) {
         
-        let bookQuery = PFQuery(className: "TotalTest")
-        bookQuery.whereKey("Subcategory", equalTo: selectedCategory ?? nil)
-        bookQuery.includeKey("Subcategory")
+        let quotesQuery = PFQuery(className: "TotalTest")
+        quotesQuery.whereKey("Subcategory", equalTo: selectedCategory ?? nil)
+        quotesQuery.includeKey("Subcategory")
         
-        bookQuery.findObjectsInBackground { (result: [PFObject]?, error) in
+        quotesQuery.findObjectsInBackground { (result: [PFObject]?, error) in
             if let searchResults = result {
                 //                print("Found Category: \(searchResults.count)")
                 
-                self.categoryItems = searchResults
-                self.categoryTable.reloadData()
+                self.quotesItems = searchResults
+//                self.categoryTable.reloadData()
             }
         }
         //
@@ -98,12 +97,12 @@ class SecondTableVC: UITableViewController {
     func fetchCategoryData() {
         let categoriesQuery = PFQuery(className: "TotalTest")
         //        categoriesQuery.whereKeyExists("Subcategory")
-        categoriesQuery.whereKey("Subcategory", equalTo: selectedCategory ?? nil)
+        categoriesQuery.whereKey("Subcategory", equalTo: selectedQuotes ?? nil)
         categoriesQuery.findObjectsInBackground { (objects, error) in
             if let realCategoryObjects = objects {
-                self.categoryItems = realCategoryObjects
+                self.quotesItems = realCategoryObjects
                 self.tableView.reloadData()
-                self.refresherCategory.endRefreshing()
+                self.refresherQuotes.endRefreshing()
             }
         }
     }
@@ -115,7 +114,7 @@ class SecondTableVC: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showCategoryDetail" {
             if let indexPath = tableView.indexPathForSelectedRow {
-                let Categoryobject = categoryItems[indexPath.row] as? NSDate
+                let Categoryobject = quotesItems[indexPath.row] as? NSDate
                 let categoryController = (segue.destination as! UINavigationController).topViewController as! DetailViewController
                 categoryController.detailItem = Categoryobject
                 categoryController.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
@@ -137,28 +136,29 @@ class SecondTableVC: UITableViewController {
     
     
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Row tapped: \(indexPath.row)")
-        
-        let selectedQuote: PFObject = categoryItems[indexPath.row]
-        let ThirdTableVC = self.storyboard?.instantiateViewController(withIdentifier: "ThirdTableVCC") as! ThirdTableVC
-        ThirdTableVC.selectedQuote = selectedQuote
-        
-        self.navigationController?.pushViewController(ThirdTableVC, animated: true)
-        
-        
-        
-        
-    }
+//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        print("Row tapped: \(indexPath.row)")
+//
+//        let selectedQuote: PFObject = categoryItems[indexPath.row]
+//        let ThirdTableVC = self.storyboard?.instantiateViewController(withIdentifier: "ThirdTableVCC") as! ThirdTableVC
+//        ThirdTableVC.selectedQuote = selectedQuote
+//
+//        self.navigationController?.pushViewController(ThirdTableVC, animated: true)
+//
+//
+//
+//
+//    }
     
     func loadCategory() {
         let categoryQuery = PFQuery(className: "TotalTest")
         categoryQuery.findObjectsInBackground { (result: [PFObject]?, error) in
             if let foundQuote = result as? [PFUser] {
-                self.categoryItems = foundQuote
+                self.quotesItems = foundQuote
                 //                self.categoryTable.reloadData()
             }
             
         }
     }
 }
+

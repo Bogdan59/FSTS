@@ -11,7 +11,16 @@ import UIKit
 
 class ThirdTableViewController: UITableViewController {
     
-    var ThirdArray = [String]()
+	var ThirdArray = [String]() {
+		willSet {
+			print(newValue)
+		}
+		
+		didSet {
+			print(oldValue)
+			print(ThirdArray)
+		}
+	}
     
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

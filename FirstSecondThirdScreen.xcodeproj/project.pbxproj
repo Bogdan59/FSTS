@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		254AFD0DEE166F12439655FD /* Pods_FirstSecondThirdScreen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B94D930F606CCFB77FF482FE /* Pods_FirstSecondThirdScreen.framework */; };
+		3A2250B71FBA19280041AD90 /* AddUsersQuotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2250B61FBA19280041AD90 /* AddUsersQuotesViewController.swift */; };
+		3A4E6BC11FBA42770014BFD8 /* SettingsContainerTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4E6BC01FBA42770014BFD8 /* SettingsContainerTableVC.swift */; };
 		3A6A1BB41FB2761300AF1E3D /* ReadServerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A1BB31FB2761300AF1E3D /* ReadServerTableViewController.swift */; };
 		3A6A1BB61FB2783000AF1E3D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A1BB51FB2783000AF1E3D /* DetailViewController.swift */; };
 		3A6A1BBB1FB3C4F200AF1E3D /* FirstTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A1BBA1FB3C4F200AF1E3D /* FirstTableVC.swift */; };
@@ -22,12 +24,17 @@
 		3A6DA84B1FAFBC0F00F0AA8B /* SecondTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6DA84A1FAFBC0F00F0AA8B /* SecondTable.swift */; };
 		3A6DA84D1FAFC00C00F0AA8B /* ThirdTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6DA84C1FAFC00C00F0AA8B /* ThirdTableViewController.swift */; };
 		3A6DA84F1FAFC07E00F0AA8B /* ThirdTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6DA84E1FAFC07E00F0AA8B /* ThirdTable.swift */; };
+		3A863E871FBA06EF001A619F /* LoginRegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A863E861FBA06EF001A619F /* LoginRegistrationVC.swift */; };
 		3AD261551FB26F7000FF1826 /* ServerWriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD261541FB26F7000FF1826 /* ServerWriteViewController.swift */; };
+		3AE8DF2D1FB8710B00D5E12A /* BarItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE8DF2C1FB8710B00D5E12A /* BarItemsViewController.swift */; };
+		3AE8DF2F1FB89E5000D5E12A /* FourthTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE8DF2E1FB89E5000D5E12A /* FourthTableVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0C8C691A81D54396A5852EAA /* Pods-FirstSecondThirdScreen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstSecondThirdScreen.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirstSecondThirdScreen/Pods-FirstSecondThirdScreen.debug.xcconfig"; sourceTree = "<group>"; };
 		135861A6F2C232D3EE1BD3BA /* Pods-FirstSecondThirdScreen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstSecondThirdScreen.release.xcconfig"; path = "Pods/Target Support Files/Pods-FirstSecondThirdScreen/Pods-FirstSecondThirdScreen.release.xcconfig"; sourceTree = "<group>"; };
+		3A2250B61FBA19280041AD90 /* AddUsersQuotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUsersQuotesViewController.swift; sourceTree = "<group>"; };
+		3A4E6BC01FBA42770014BFD8 /* SettingsContainerTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsContainerTableVC.swift; sourceTree = "<group>"; };
 		3A6A1BB31FB2761300AF1E3D /* ReadServerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadServerTableViewController.swift; sourceTree = "<group>"; };
 		3A6A1BB51FB2783000AF1E3D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		3A6A1BBA1FB3C4F200AF1E3D /* FirstTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTableVC.swift; sourceTree = "<group>"; };
@@ -44,7 +51,10 @@
 		3A6DA84A1FAFBC0F00F0AA8B /* SecondTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTable.swift; sourceTree = "<group>"; };
 		3A6DA84C1FAFC00C00F0AA8B /* ThirdTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdTableViewController.swift; sourceTree = "<group>"; };
 		3A6DA84E1FAFC07E00F0AA8B /* ThirdTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdTable.swift; sourceTree = "<group>"; };
+		3A863E861FBA06EF001A619F /* LoginRegistrationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRegistrationVC.swift; sourceTree = "<group>"; };
 		3AD261541FB26F7000FF1826 /* ServerWriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerWriteViewController.swift; sourceTree = "<group>"; };
+		3AE8DF2C1FB8710B00D5E12A /* BarItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarItemsViewController.swift; sourceTree = "<group>"; };
+		3AE8DF2E1FB89E5000D5E12A /* FourthTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthTableVC.swift; sourceTree = "<group>"; };
 		B94D930F606CCFB77FF482FE /* Pods_FirstSecondThirdScreen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirstSecondThirdScreen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -66,6 +76,11 @@
 				3A6A1BBA1FB3C4F200AF1E3D /* FirstTableVC.swift */,
 				3A6A1BBD1FB3C54400AF1E3D /* SecondTableVC.swift */,
 				3A6A1BBF1FB4852000AF1E3D /* ThirdTableVC.swift */,
+				3AE8DF2C1FB8710B00D5E12A /* BarItemsViewController.swift */,
+				3AE8DF2E1FB89E5000D5E12A /* FourthTableVC.swift */,
+				3A863E861FBA06EF001A619F /* LoginRegistrationVC.swift */,
+				3A2250B61FBA19280041AD90 /* AddUsersQuotesViewController.swift */,
+				3A4E6BC01FBA42770014BFD8 /* SettingsContainerTableVC.swift */,
 			);
 			path = "New Group";
 			sourceTree = "<group>";
@@ -262,10 +277,15 @@
 				3A6DA84F1FAFC07E00F0AA8B /* ThirdTable.swift in Sources */,
 				3A6DA84B1FAFBC0F00F0AA8B /* SecondTable.swift in Sources */,
 				3AD261551FB26F7000FF1826 /* ServerWriteViewController.swift in Sources */,
+				3AE8DF2F1FB89E5000D5E12A /* FourthTableVC.swift in Sources */,
+				3A863E871FBA06EF001A619F /* LoginRegistrationVC.swift in Sources */,
 				3A6A1BBE1FB3C54400AF1E3D /* SecondTableVC.swift in Sources */,
+				3A2250B71FBA19280041AD90 /* AddUsersQuotesViewController.swift in Sources */,
 				3A6DA8491FAFB9A100F0AA8B /* SecondTableViewController.swift in Sources */,
 				3A6DA8391FAFB4EC00F0AA8B /* FirstTableViewController.swift in Sources */,
 				3A6DA8371FAFB4EC00F0AA8B /* AppDelegate.swift in Sources */,
+				3AE8DF2D1FB8710B00D5E12A /* BarItemsViewController.swift in Sources */,
+				3A4E6BC11FBA42770014BFD8 /* SettingsContainerTableVC.swift in Sources */,
 				3A6A1BBB1FB3C4F200AF1E3D /* FirstTableVC.swift in Sources */,
 				3A6DA84D1FAFC00C00F0AA8B /* ThirdTableViewController.swift in Sources */,
 				3A6A1BC01FB4852000AF1E3D /* ThirdTableVC.swift in Sources */,
@@ -408,11 +428,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FirstSecondThirdScreen/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = swift.FirstSecondThirdScreen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -423,11 +444,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FirstSecondThirdScreen/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = swift.FirstSecondThirdScreen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

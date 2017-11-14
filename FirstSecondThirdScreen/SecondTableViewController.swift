@@ -85,8 +85,15 @@ class SecondTableViewController: UITableViewController {
         //
         
         
-    }
-}
+//<<<<<<< HEAD
+//=======
+//        var indexPath: NSIndexPath = self.tableView.indexPathForSelectedRow! as NSIndexPath
+//        var ThirdTableArray: ThirdTable
+//        ThirdTableArray = ThirdArray[indexPath.row]
+////        DestViewControllerThird.ThirdArray = ThirdTableArray.ThirdTitle
+//>>>>>>> 72f6ee0f0dafcec3cc21d57c760164aa3ef0ffe4
+//    }
+//}
 
 
 //    var SecondArray = [String]()
@@ -128,3 +135,5 @@ class SecondTableViewController: UITableViewController {
 //
 //}
 //
+}
+}

@@ -11,21 +11,52 @@ import Parse
 
 class ServerWriteViewController : UIViewController {
     
-    @IBOutlet weak var textField: UITextField!
-    @IBOutlet weak var usernameField: UITextField!
-    @IBAction func saveRecord() {
-        let object = PFObject(className: "UsersQuotes")
-        object["textQuote"] = textField.text!
-        object["username"] = self.usernameField.text!
-        object.saveEventually {
-            (success, error) in
-            if success {
-                self.textField.text = nil
-                self.usernameField.text = nil
-            }
+    @IBAction func organizeBtn(_ sender: UIBarButtonItem) {
+        if isSlideMenuHidden {
+            sideMenuConstraint.constant = 0
+            
+            UIView.animate(withDuration: 0.4, animations: {
+                self.view.layoutIfNeeded()
+            })
+            
+        }else {
+            sideMenuConstraint.constant = -140
+            
+            UIView.animate(withDuration: 0.4, animations: {
+                self.view.layoutIfNeeded()
+            })
             
         }
+        isSlideMenuHidden = !isSlideMenuHidden
+    }
+    
+    @IBOutlet weak var sideMenuConstraint: NSLayoutConstraint!
+    
+    var isSlideMenuHidden = true
+    
+    
+//    @IBOutlet weak var textField: UITextField!
+//    @IBOutlet weak var usernameField: UITextField!
+//    @IBAction func saveRecord() {
+//        let object = PFObject(className: "UsersQuotes")
+//        object["textQuote"] = textField.text!
+//        object["username"] = self.usernameField.text!
+//        object.saveEventually {
+//            (success, error) in
+//            if success {
+//                self.textField.text = nil
+//                self.usernameField.text = nil
+//            }
+//            
+//        }
+//        
+//    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // initialize constant with 0
         
+        sideMenuConstraint.constant = -140
     }
     
     
