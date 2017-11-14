@@ -9,9 +9,9 @@ import UIKit
 import Parse
 
 class FourthTableVC: UITableViewController {
-
+    
     @IBOutlet weak var refresherQuotes: UIRefreshControl!
-//    @IBOutlet var categoryTable: UITableView!
+    //    @IBOutlet var categoryTable: UITableView!
     
     var selectedQuotes: PFObject?
     var quotesItems = [PFObject]()
@@ -85,7 +85,7 @@ class FourthTableVC: UITableViewController {
                 //                print("Found Category: \(searchResults.count)")
                 
                 self.quotesItems = searchResults
-//                self.categoryTable.reloadData()
+                //                self.categoryTable.reloadData()
             }
         }
         //
@@ -136,19 +136,19 @@ class FourthTableVC: UITableViewController {
     
     
     
-//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        print("Row tapped: \(indexPath.row)")
-//
-//        let selectedQuote: PFObject = categoryItems[indexPath.row]
-//        let ThirdTableVC = self.storyboard?.instantiateViewController(withIdentifier: "ThirdTableVCC") as! ThirdTableVC
-//        ThirdTableVC.selectedQuote = selectedQuote
-//
-//        self.navigationController?.pushViewController(ThirdTableVC, animated: true)
-//
-//
-//
-//
-//    }
+    //    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    //        print("Row tapped: \(indexPath.row)")
+    //
+    //        let selectedQuote: PFObject = categoryItems[indexPath.row]
+    //        let ThirdTableVC = self.storyboard?.instantiateViewController(withIdentifier: "ThirdTableVCC") as! ThirdTableVC
+    //        ThirdTableVC.selectedQuote = selectedQuote
+    //
+    //        self.navigationController?.pushViewController(ThirdTableVC, animated: true)
+    //
+    //
+    //
+    //
+    //    }
     
     func loadCategory() {
         let categoryQuery = PFQuery(className: "TotalTest")

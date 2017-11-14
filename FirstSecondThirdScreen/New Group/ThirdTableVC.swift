@@ -15,44 +15,44 @@ class ThirdTableVC: UITableViewController {
     @IBOutlet weak var refresherQuotes: UIRefreshControl!
     @IBOutlet var quoteTable: UITableView!
     
-        var selectedQuote: PFObject?
-         var quoteItems = [PFObject]()
+    var selectedQuote: PFObject?
+    var quoteItems = [PFObject]()
     
-             override func viewDidLoad() {
-                     super.viewDidLoad()
-                
-                 }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
     @IBAction func updateQuotesResults(_ sender: UIRefreshControl) {
         fetchQuotesData()
     }
     
-         override func viewWillAppear(_ animated: Bool) {
-                 super.viewWillAppear(animated)
-            
-                     loadQuoteTexts(selectedQuote: selectedQuote)
-             }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        loadQuoteTexts(selectedQuote: selectedQuote)
+    }
     
     
-         override func didReceiveMemoryWarning() {
-                 super.didReceiveMemoryWarning()
-                     // Dispose of any resources that can be recreated.
-             }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
     
-         // MARK: - Table view data source
+    // MARK: - Table view data source
     
-         override func numberOfSections(in tableView: UITableView) -> Int {
-         
-            
-            
-                 return 1
-             }
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        
+        
+        
+        return 1
+    }
     
-         override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-         
-            
-            
-                 return quoteItems.count
-             }
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        
+        
+        return quoteItems.count
+    }
     
     func fetchQuotesData() {
         let quotesQuery = PFQuery(className: "TotalTest")
@@ -68,19 +68,19 @@ class ThirdTableVC: UITableViewController {
     }
     
     
-         override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-                 let quoteCell = tableView.dequeueReusableCell(withIdentifier: "quoteCell", for: indexPath)
-         
-                 let quoteItem = quoteItems[indexPath.row]
-                 let quoteUserTitle = quoteItem.object(forKey: "TextQuote") as? String
-                 //
-                 //        let songItem = categoryItems[indexPath.row]
-                 //        _ = songItem.object(forKey: "SongsText") as? String
-         
-                 quoteCell.textLabel?.text = quoteUserTitle
-         
-                 return quoteCell
-             }
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let quoteCell = tableView.dequeueReusableCell(withIdentifier: "quoteCell", for: indexPath)
+        
+        let quoteItem = quoteItems[indexPath.row]
+        let quoteUserTitle = quoteItem.object(forKey: "TextQuote") as? String
+        //
+        //        let songItem = categoryItems[indexPath.row]
+        //        _ = songItem.object(forKey: "SongsText") as? String
+        
+        quoteCell.textLabel?.text = quoteUserTitle
+        
+        return quoteCell
+    }
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -94,7 +94,7 @@ class ThirdTableVC: UITableViewController {
             }
         }
     }
-
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("Row tapped: \(indexPath.row)")
         
@@ -107,23 +107,23 @@ class ThirdTableVC: UITableViewController {
         
     }
     
-         func loadQuoteTexts(selectedQuote: PFObject!) {
-         
-                 let quoteQuery = PFQuery(className: "TotalQuote")
-                 quoteQuery.whereKey("QuoteSubs", equalTo: selectedQuote ?? nil)
-                 quoteQuery.includeKey("QuoteSubs")
-         
-                 quoteQuery.findObjectsInBackground { (result: [PFObject]?, error) in
-                     if let searchQuoteResults = result {
-                         //                print("Found Category: \(searchResults.count)")
-         
-                         self.quoteItems = searchQuoteResults
-                         self.quoteTable.reloadData()
-                     }
-                 }
-                 //
-                 //
-         
-         
-             }
-     }
+    func loadQuoteTexts(selectedQuote: PFObject!) {
+        
+        let quoteQuery = PFQuery(className: "TotalQuote")
+        quoteQuery.whereKey("QuoteSubs", equalTo: selectedQuote ?? nil)
+        quoteQuery.includeKey("QuoteSubs")
+        
+        quoteQuery.findObjectsInBackground { (result: [PFObject]?, error) in
+            if let searchQuoteResults = result {
+                //                print("Found Category: \(searchResults.count)")
+                
+                self.quoteItems = searchQuoteResults
+                self.quoteTable.reloadData()
+            }
+        }
+        //
+        //
+        
+        
+    }
+}
