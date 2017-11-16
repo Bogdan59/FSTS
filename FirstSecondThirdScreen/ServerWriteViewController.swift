@@ -11,6 +11,8 @@ import Parse
 
 class ServerWriteViewController : UIViewController {
     
+    @IBOutlet weak var quoteTextFieldStatic: UITextView!
+    
     @IBAction func organizeBtn(_ sender: UIBarButtonItem) {
         if isSlideMenuHidden {
             sideMenuConstraint.constant = 0
@@ -55,6 +57,7 @@ class ServerWriteViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // initialize constant with 0
+//        quoteTextFieldStatic.delegate = self as! UITextViewDelegate
         
         sideMenuConstraint.constant = -140
     }

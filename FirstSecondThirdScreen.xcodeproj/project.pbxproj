@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		254AFD0DEE166F12439655FD /* Pods_FirstSecondThirdScreen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B94D930F606CCFB77FF482FE /* Pods_FirstSecondThirdScreen.framework */; };
+		3A0DF90C1FBCFDDD00CD9A5D /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0DF90B1FBCFDDD00CD9A5D /* FourthViewController.swift */; };
+		3A0DF90E1FBDDD8800CD9A5D /* UsersQuotesTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0DF90D1FBDDD8800CD9A5D /* UsersQuotesTVC.swift */; };
 		3A2250B71FBA19280041AD90 /* AddUsersQuotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2250B61FBA19280041AD90 /* AddUsersQuotesViewController.swift */; };
 		3A4E6BC11FBA42770014BFD8 /* SettingsContainerTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4E6BC01FBA42770014BFD8 /* SettingsContainerTableVC.swift */; };
 		3A6A1BB41FB2761300AF1E3D /* ReadServerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A1BB31FB2761300AF1E3D /* ReadServerTableViewController.swift */; };
@@ -33,6 +35,8 @@
 /* Begin PBXFileReference section */
 		0C8C691A81D54396A5852EAA /* Pods-FirstSecondThirdScreen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstSecondThirdScreen.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirstSecondThirdScreen/Pods-FirstSecondThirdScreen.debug.xcconfig"; sourceTree = "<group>"; };
 		135861A6F2C232D3EE1BD3BA /* Pods-FirstSecondThirdScreen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstSecondThirdScreen.release.xcconfig"; path = "Pods/Target Support Files/Pods-FirstSecondThirdScreen/Pods-FirstSecondThirdScreen.release.xcconfig"; sourceTree = "<group>"; };
+		3A0DF90B1FBCFDDD00CD9A5D /* FourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
+		3A0DF90D1FBDDD8800CD9A5D /* UsersQuotesTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersQuotesTVC.swift; sourceTree = "<group>"; };
 		3A2250B61FBA19280041AD90 /* AddUsersQuotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUsersQuotesViewController.swift; sourceTree = "<group>"; };
 		3A4E6BC01FBA42770014BFD8 /* SettingsContainerTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsContainerTableVC.swift; sourceTree = "<group>"; };
 		3A6A1BB31FB2761300AF1E3D /* ReadServerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadServerTableViewController.swift; sourceTree = "<group>"; };
@@ -76,10 +80,12 @@
 				3A6A1BBA1FB3C4F200AF1E3D /* FirstTableVC.swift */,
 				3A6A1BBD1FB3C54400AF1E3D /* SecondTableVC.swift */,
 				3A6A1BBF1FB4852000AF1E3D /* ThirdTableVC.swift */,
-				3AE8DF2C1FB8710B00D5E12A /* BarItemsViewController.swift */,
+				3A0DF90B1FBCFDDD00CD9A5D /* FourthViewController.swift */,
 				3AE8DF2E1FB89E5000D5E12A /* FourthTableVC.swift */,
+				3AE8DF2C1FB8710B00D5E12A /* BarItemsViewController.swift */,
 				3A863E861FBA06EF001A619F /* LoginRegistrationVC.swift */,
 				3A2250B61FBA19280041AD90 /* AddUsersQuotesViewController.swift */,
+				3A0DF90D1FBDDD8800CD9A5D /* UsersQuotesTVC.swift */,
 				3A4E6BC01FBA42770014BFD8 /* SettingsContainerTableVC.swift */,
 			);
 			path = "New Group";
@@ -275,6 +281,7 @@
 				3A6A1BB61FB2783000AF1E3D /* DetailViewController.swift in Sources */,
 				3A6A1BB41FB2761300AF1E3D /* ReadServerTableViewController.swift in Sources */,
 				3A6DA84F1FAFC07E00F0AA8B /* ThirdTable.swift in Sources */,
+				3A0DF90E1FBDDD8800CD9A5D /* UsersQuotesTVC.swift in Sources */,
 				3A6DA84B1FAFBC0F00F0AA8B /* SecondTable.swift in Sources */,
 				3AD261551FB26F7000FF1826 /* ServerWriteViewController.swift in Sources */,
 				3AE8DF2F1FB89E5000D5E12A /* FourthTableVC.swift in Sources */,
@@ -284,6 +291,7 @@
 				3A6DA8491FAFB9A100F0AA8B /* SecondTableViewController.swift in Sources */,
 				3A6DA8391FAFB4EC00F0AA8B /* FirstTableViewController.swift in Sources */,
 				3A6DA8371FAFB4EC00F0AA8B /* AppDelegate.swift in Sources */,
+				3A0DF90C1FBCFDDD00CD9A5D /* FourthViewController.swift in Sources */,
 				3AE8DF2D1FB8710B00D5E12A /* BarItemsViewController.swift in Sources */,
 				3A4E6BC11FBA42770014BFD8 /* SettingsContainerTableVC.swift in Sources */,
 				3A6A1BBB1FB3C4F200AF1E3D /* FirstTableVC.swift in Sources */,

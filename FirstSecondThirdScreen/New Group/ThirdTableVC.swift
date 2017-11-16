@@ -82,7 +82,11 @@ class ThirdTableVC: UITableViewController {
         return quoteCell
     }
     
-    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        IndexPath = [self.tableView .indexPathForSelectedRow]
+//        self.FourthViewController.fourthLabel
+//    }
+//
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showQuoteDetail" {
             if let indexPath = tableView.indexPathForSelectedRow {
@@ -95,16 +99,37 @@ class ThirdTableVC: UITableViewController {
         }
     }
     
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "FourthVCC" {
+//            if let selectedIndexPath = self.tableView.indexPathForSelectedRow {
+//                let currentItem = quoteItems[selectedIndexPath.row]
+//                if let viewcontroller = segue.destination as? FourthViewController {
+//                    viewcontroller.fourthTextView = currentItem
+//                }
+//            }
+//        }
+//    }
+    
+//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        performSegue(withIdentifier: "FourthVC", sender: self)
+//    }
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("Row tapped: \(indexPath.row)")
         
-        let selectedQuotes: PFObject = quoteItems[indexPath.row]
-        let  FourthTableVC = self.storyboard?.instantiateViewController(withIdentifier: "FourthTableVCC") as! FourthTableVC
-        FourthTableVC.selectedQuotes = selectedQuotes
+        let MainStory: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let desVC = MainStory.instantiateViewController(withIdentifier: "FourthViewController") as! FourthViewController
+        desVC.getText = "Text tra ta ta"
+        self.navigationController?.pushViewController(desVC, animated: true)
         
-        self.navigationController?.pushViewController(FourthTableVC, animated: true)
-        
-        
+//        performSegue(withIdentifier: "FourthVCC", sender: self)
+//        let selectedQuotes: PFObject = (quoteItems[indexPath.row] ?? nil)!
+//        let  FourthVC = self.storyboard?.instantiateViewController(withIdentifier: "FourthVCC") as! FourthViewController
+////        FourthVC.selectedQuotes = selectedQuotes
+//        FourthVC.fourthTextView.text = quoteItems[indexPath.row] as? String
+//        self.navigationController?.pushViewController(FourthVC, animated: true)
+
+    
     }
     
     func loadQuoteTexts(selectedQuote: PFObject!) {

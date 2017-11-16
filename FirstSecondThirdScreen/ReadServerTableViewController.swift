@@ -107,8 +107,8 @@ class ReadServerTableViewController : UITableViewController { //, UITableViewDat
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let  cell = tableView.dequeueReusableCell(withIdentifier: "ReadCell", for: indexPath)
         let categoryObject: PFUser = userQuote[indexPath.row]
-        cell.textLabel!.text = categoryObject.object(forKey: "textQuote") as? String
-        cell.textLabel!.text = categoryObject.object(forKey: "username") as? String
+        cell.textLabel!.text = categoryObject.object(forKey: "text") as? String
+        cell.textLabel!.text = categoryObject.object(forKey: "authorName") as? String
         
         return cell
     }
@@ -119,7 +119,7 @@ class ReadServerTableViewController : UITableViewController { //, UITableViewDat
     }
     
     func loadUserQuote() {
-        let categoryQuery = PFQuery(className: "UsersQuotes")
+        let categoryQuery = PFQuery(className: "AddsUserQuote")
         categoryQuery.findObjectsInBackground { (result: [PFObject]?, error) in
             if let foundCategory = result as? [PFUser] {
                 self.userQuote = foundCategory
