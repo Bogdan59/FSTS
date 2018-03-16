@@ -11,17 +11,16 @@ import UIKit
 
 class ThirdTableViewController: UITableViewController {
     
-	var ThirdArray = [String]() {
-		willSet {
-			print(newValue)
-		}
-		
-		didSet {
-			print(oldValue)
-			print(ThirdArray)
-		}
-	}
-    
+    var ThirdArray = [String]() {
+        willSet {
+            print(newValue)
+        }
+        
+        didSet {
+            print(oldValue)
+            print(ThirdArray)
+        }
+    }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print(ThirdArray.count)
@@ -35,7 +34,6 @@ class ThirdTableViewController: UITableViewController {
         
         return CellThird
     }
-    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         var DestViewController = segue.destination as! ThirdTableViewController

@@ -43,19 +43,15 @@ class SecondTableVC: UITableViewController {
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         
-        
-        
         return 1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return categoryItems.count
-        
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let bookCell = tableView.dequeueReusableCell(withIdentifier: "bookCell", for: indexPath)
-        
         let bookItem = categoryItems[indexPath.row]
         let categoryUserTitle = bookItem.object(forKey: "Text") as? String
         //
@@ -72,15 +68,10 @@ class SecondTableVC: UITableViewController {
         return bookCell
     }
     
-    
-    
-    
     func loadCategorySub(selectedCategory: PFObject!) {
-        
         let bookQuery = PFQuery(className: "TotalTest")
         bookQuery.whereKey("Subcategory", equalTo: selectedCategory ?? nil)
         bookQuery.includeKey("Subcategory")
-        
         bookQuery.findObjectsInBackground { (result: [PFObject]?, error) in
             if let searchResults = result {
                 //                print("Found Category: \(searchResults.count)")
@@ -124,31 +115,12 @@ class SecondTableVC: UITableViewController {
         }
     }
     
-    
-    //    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    //        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-    //
-    //        let object = category[indexPath.row]
-    //        cell.textLabel!.text = object["Class"] as? String
-    //        return cell
-    //    }
-    //
-    
-    
-    
-    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("Row tapped: \(indexPath.row)")
-        
         let selectedQuote: PFObject = categoryItems[indexPath.row]
         let ThirdTableVC = self.storyboard?.instantiateViewController(withIdentifier: "ThirdTableVCC") as! ThirdTableVC
         ThirdTableVC.selectedQuote = selectedQuote
-        
         self.navigationController?.pushViewController(ThirdTableVC, animated: true)
-        
-        
-        
-        
     }
     
     func loadCategory() {

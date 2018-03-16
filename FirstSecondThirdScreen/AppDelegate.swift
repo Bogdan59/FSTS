@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     
+        Parse.enableLocalDatastore()
             // Initialize Parse.
         let configuration = ParseClientConfiguration {
             $0.applicationId = "UwbCI9p6svmuWdBUHgSloG0XIF7e0arFwxtt1I6N"

@@ -11,21 +11,38 @@ import Parse
 
 class FourthViewController: UIViewController {
 
-    var getQuote: PFObject?
-    var getText = String()
+//    var getQuote: PFObject?
+//    var getText = String()
+//    var getingText = ThirdTableVC.loadQuoteTexts
     
-    @IBOutlet weak var fourthTextView: UITextView!
+
     @IBOutlet weak var fourthLabel: UILabel!
     
+    func configureView() {
+        // Update the user interface for the detail item.
+        if let detail = detailItem {
+            if let label = fourthLabel {
+                label.text = detail["TextQuote"] as? String
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        fourthLabel.text! = getQuote as! String
-        fourthTextView.text! = getText
-//        fourthTextView.text! = getQuote as! String
-        
+        // Do any additional setup after loading the view, typically from a nib.
+        configureView()
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    var detailItem: PFObject? {
+        didSet {
+            // Update the view.
+            configureView()
+        }
     }
 
-
-    
 }

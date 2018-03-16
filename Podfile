@@ -7,4 +7,6 @@ target 'FirstSecondThirdScreen' do
 
   # Pods for FirstSecondThirdScreen
 pod 'Parse'
+pod 'ParseUI'
+
 end

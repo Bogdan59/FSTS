@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lcs-kX-GQX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lcs-kX-GQX">
     <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -139,6 +139,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="4Ld-tY-4Mc" kind="show" identifier="showQuoteTexts" id="143-x0-bpW"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -170,40 +173,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="FourthViewController" text="111" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dir-Gl-VZS">
-                                <rect key="frame" x="0.0" y="20" width="320" height="217"/>
-                                <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="217" id="3Jv-KB-lsf"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label errewreewrerererewrewrewrererewrewrewreeeeeeeeeeeeeee" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nB7-Hl-IMf">
+                                <rect key="frame" x="16" y="20" width="288" height="268"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UAA-ar-0Zd">
-                                <rect key="frame" x="275" y="253" width="25" height="25"/>
+                                <rect key="frame" x="284" y="296" width="20" height="25"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="25" id="lxk-rS-uQI"/>
+                                    <constraint firstAttribute="height" constant="25" id="apV-KC-VXY"/>
                                 </constraints>
                                 <state key="normal" image="copy"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="UAA-ar-0Zd" firstAttribute="top" secondItem="dir-Gl-VZS" secondAttribute="bottom" constant="16" id="0fF-zn-2RD"/>
-                            <constraint firstItem="dir-Gl-VZS" firstAttribute="leading" secondItem="0dn-hW-CeN" secondAttribute="leading" id="7LN-rx-XbO"/>
-                            <constraint firstItem="dir-Gl-VZS" firstAttribute="trailing" secondItem="0dn-hW-CeN" secondAttribute="trailing" id="Vgd-bq-6lE"/>
-                            <constraint firstItem="0dn-hW-CeN" firstAttribute="trailing" secondItem="UAA-ar-0Zd" secondAttribute="trailing" constant="20" id="YR5-1F-la4"/>
-                            <constraint firstItem="dir-Gl-VZS" firstAttribute="top" secondItem="0dn-hW-CeN" secondAttribute="top" id="uOb-8M-tnR"/>
+                            <constraint firstItem="nB7-Hl-IMf" firstAttribute="top" secondItem="0dn-hW-CeN" secondAttribute="top" id="29P-So-Qwk"/>
+                            <constraint firstItem="UAA-ar-0Zd" firstAttribute="top" secondItem="nB7-Hl-IMf" secondAttribute="bottom" constant="8" symbolic="YES" id="4eE-Md-fHu"/>
+                            <constraint firstItem="0dn-hW-CeN" firstAttribute="bottom" secondItem="UAA-ar-0Zd" secondAttribute="bottom" constant="159" id="L4P-qI-G4w"/>
+                            <constraint firstItem="nB7-Hl-IMf" firstAttribute="trailing" secondItem="0L7-0a-1KF" secondAttribute="trailingMargin" id="Sl1-4E-pAA"/>
+                            <constraint firstItem="UAA-ar-0Zd" firstAttribute="leading" secondItem="0dn-hW-CeN" secondAttribute="leading" constant="284" id="eVW-sc-R2s"/>
+                            <constraint firstItem="nB7-Hl-IMf" firstAttribute="leading" secondItem="0L7-0a-1KF" secondAttribute="leadingMargin" id="ea4-bL-AF7"/>
+                            <constraint firstItem="nB7-Hl-IMf" firstAttribute="trailing" secondItem="UAA-ar-0Zd" secondAttribute="trailing" id="rqf-gK-jYn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0dn-hW-CeN"/>
                     </view>
                     <connections>
-                        <outlet property="fourthTextView" destination="dir-Gl-VZS" id="uGM-bQ-5F5"/>
+                        <outlet property="fourthLabel" destination="nB7-Hl-IMf" id="khB-uJ-mBe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ckZ-7s-iYj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4072.5" y="5172.5"/>
+            <point key="canvasLocation" x="-4138.125" y="5197.5"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="3JP-9F-aDM">

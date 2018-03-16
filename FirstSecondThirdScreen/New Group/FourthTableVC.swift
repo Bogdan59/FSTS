@@ -32,7 +32,6 @@ class FourthTableVC: UITableViewController {
         //        loadCategorySongs(selectedCategory: selectedCategory)
     }
     
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -41,8 +40,6 @@ class FourthTableVC: UITableViewController {
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        
-        
         
         return 1
     }
@@ -57,41 +54,23 @@ class FourthTableVC: UITableViewController {
         
         let bookItem = quotesItems[indexPath.row]
         let categoryUserTitle = bookItem.object(forKey: "Text") as? String
-        //
-        //        let songItem = categoryItems[indexPath.row]
-        //        _ = songItem.object(forKey: "SongsText") as? String
         
         quotesCell.textLabel?.text = categoryUserTitle
-        
-        //        let categoryCell = tableView.dequeueReusableCell(withIdentifier: "bookCell", for: indexPath)
-        
-        //        let object = category[indexPath.row]
-        //        categoryTable.textLabel!.text = bookItem["Text"] as? String
         
         return quotesCell
     }
     
-    
-    
-    
     func loadQuotesCategorySub(selectedCategory: PFObject!) {
-        
         let quotesQuery = PFQuery(className: "TotalTest")
         quotesQuery.whereKey("Subcategory", equalTo: selectedCategory ?? nil)
         quotesQuery.includeKey("Subcategory")
-        
         quotesQuery.findObjectsInBackground { (result: [PFObject]?, error) in
             if let searchResults = result {
                 //                print("Found Category: \(searchResults.count)")
-                
                 self.quotesItems = searchResults
                 //                self.categoryTable.reloadData()
             }
         }
-        //
-        //
-        
-        
     }
     
     func fetchCategoryData() {
@@ -107,8 +86,6 @@ class FourthTableVC: UITableViewController {
         }
     }
     
-    
-    
     // MARK: - Segues
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -123,33 +100,6 @@ class FourthTableVC: UITableViewController {
         }
     }
     
-    
-    //    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    //        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-    //
-    //        let object = category[indexPath.row]
-    //        cell.textLabel!.text = object["Class"] as? String
-    //        return cell
-    //    }
-    //
-    
-    
-    
-    
-    //    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    //        print("Row tapped: \(indexPath.row)")
-    //
-    //        let selectedQuote: PFObject = categoryItems[indexPath.row]
-    //        let ThirdTableVC = self.storyboard?.instantiateViewController(withIdentifier: "ThirdTableVCC") as! ThirdTableVC
-    //        ThirdTableVC.selectedQuote = selectedQuote
-    //
-    //        self.navigationController?.pushViewController(ThirdTableVC, animated: true)
-    //
-    //
-    //
-    //
-    //    }
-    
     func loadCategory() {
         let categoryQuery = PFQuery(className: "TotalTest")
         categoryQuery.findObjectsInBackground { (result: [PFObject]?, error) in
@@ -157,8 +107,8 @@ class FourthTableVC: UITableViewController {
                 self.quotesItems = foundQuote
                 //                self.categoryTable.reloadData()
             }
-            
         }
     }
+    
 }
 

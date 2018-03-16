@@ -16,6 +16,7 @@ class FirstTableVC: UITableViewController {
     var category = [PFObject]()
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -30,6 +31,7 @@ class FirstTableVC: UITableViewController {
                 self.category = realObjects
                 self.tableView.reloadData()
                 self.refresher.endRefreshing()
+                
             }
         }
     }
@@ -37,8 +39,6 @@ class FirstTableVC: UITableViewController {
     @IBAction func updateResults(_ sender: UIRefreshControl) {
         fetchData()
     }
-    
-    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showCategoryDetail" {
@@ -72,9 +72,6 @@ class FirstTableVC: UITableViewController {
     }
     //
     
-    
-    
-    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("Row tapped: \(indexPath.row)")
         
@@ -83,10 +80,6 @@ class FirstTableVC: UITableViewController {
         SecondTableVC.selectedCategory = selectedCategory
         
         self.navigationController?.pushViewController(SecondTableVC, animated: true)
-        
-        
-        
-        
     }
     
     func loadCategory() {
@@ -96,9 +89,7 @@ class FirstTableVC: UITableViewController {
                 self.category = foundCategory
                 //                self.categoryTable.reloadData()
             }
-            
         }
     }
-    
     
 }
